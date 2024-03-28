@@ -82,6 +82,115 @@ INSERT INTO `GPUdetails` VALUES ('GeForce GT 1010','Nvidia',2,1,1),
 	('Arc A750','Intel',8,29,3);
 
 
+--  CREATING GAME DETAILS TABLE
+CREATE TABLE IF NOT EXISTS `Gamedetails` (
+    `Game_Name` VARCHAR(25) CHARACTER SET utf8,
+    `Space_Required_GB` INT,
+    `Min_CPU_Str` INT,
+    `Minimum_GPU_Str` INT,
+    `Rec_CPU_Str` INT,
+    `Rec_GPU_Str` INT
+);
+
+--  INSERTING DATA INTO GAME DETAILS
+INSERT INTO `Gamedetails` VALUES ('Call of Duty: Warzone',125,5,1,6,5),
+	('Helldivers 2',100,4,4,17,20),
+	('Grand  Theft Auto V',72,1,1,2,2),
+	('Red Dead Redemption 2',150,1,1,4,5),
+	('Baldur''s Gate 3',150,3,1,14,21),
+	('Cyberpunk 2077',70,7,5,28,21),
+	('Elden Ring',60,13,5,14,6),
+	('VALORANT',40,1,1,2,2),
+	('Fortnite',30,1,1,1,1),
+	('Palworld',40,3,3,18,22),
+	('Counter-Strike 2',85,1,1,3,3),
+	('Hogwarts Legacy',85,6,1,14,9),
+	('Minecraft',3,1,1,3,3),
+	('God of War',70,1,1,6,5),
+	('League of Legends',16,1,1,1,1),
+	('Starfield',125,7,7,20,24),
+	('The Witcher 3: Wild Hunt',35,1,1,4,3),
+	('Forza Horizon 5',110,3,1,13,6),
+	('Apex Legends',56,5,1,7,2),
+	('Genshin Impact',30,2,2,3,5),
+	('Lethal Company',1,9,3,9,3),
+	('The Sims 4',26,1,1,3,1),
+	('Assassin''s Creed Valhalla',50,1,1,5,8),
+	('Battlefield 2042',11,3,4,16,29),
+	('Deep Rock Galactic',10,1,1,1,2),
+	('Enter the Gungeon',2,1,1,1,1),
+	('Lies of P',50,5,1,5,17),
+	('The Finals',15,6,1,16,22),
+	('Dragon''s Dogma 2',100,20,6,21,24),
+	('Sons Of The Forest',20,13,5,14,9);
+
+
+-- CREATING CPUdetails_1 TABLE
+CREATE TABLE IF NOT EXISTS `CPUdetails_1` (
+    `CPU_Name` VARCHAR(12) CHARACTER SET utf8,
+    `Brand` VARCHAR(5) CHARACTER SET utf8,
+    `Strength` INT,
+    `Generation` INT
+);
+
+--  INSERTING VALUES INTO CPUdetails_1 TABLE
+INSERT INTO `CPUdetails_1` VALUES ('Gen 4 i3','Intel',1,1),
+	('Gen 5 i3','Intel',2,2),
+	('Gen 5 i5','Intel',3,2),
+	('Gen 5 i7','Intel',4,2),
+	('Gen 6 i3','Intel',5,3),
+	('Gen 6 i5','Intel',6,3),
+	('Gen 6 i7','Intel',7,3),
+	('Gen 7 i3','Intel',8,4),
+	('Gen 7 i5','Intel',9,4),
+	('Gen 7 i7','Intel',10,4),
+	('Gen 7 i9','Intel',11,4),
+	('Gen 8 i3','Intel',12,5),
+	('Gen 8 i5','Intel',13,5),
+	('Gen 8 i7','Intel',14,5),
+	('Gen 9 i3','Intel',15,6),
+	('Gen 9 i5','Intel',16,6),
+	('Gen 9 i7','Intel',17,6),
+	('Gen 9 i9','Intel',18,6),
+	('Gen 10 i3','Intel',19,7),
+	('Gen 10 i5','Intel',20,7),
+	('Gen 10 i7','Intel',21,7),
+	('Gen 10 i9','Intel',22,7),
+	('Gen 11 i5','Intel',23,8),
+	('Gen 11 i7','Intel',24,8),
+	('Gen 11 i9','Intel',25,8),
+	('Gen 12 i3','Intel',26,9),
+	('Gen 12 i5','Intel',27,9),
+	('Gen 12 i7','Intel',28,9),
+	('Gen 12 i9','Intel',29,9),
+	('Gen 13 i3','Intel',30,10),
+	('Gen 13 i5','Intel',31,10),
+	('Gen 13 i7','Intel',32,10),
+	('Gen 13 i9','Intel',33,10),
+	('Gen 14 i3','Intel',34,11),
+	('Gen 14 i5','Intel',35,11),
+	('Gen 14 i7','Intel',36,11),
+	('Gen 14 i9','Intel',37,11),
+	('Ryzen 1000 3','AMD',8,4),
+	('Ryzen 1000 5','AMD',9,4),
+	('Ryzen 1000 7','AMD',10,4),
+	('Ryzen 2000 3','AMD',12,5),
+	('Ryzen 2000 5','AMD',13,5),
+	('Ryzen 3000 3','AMD',15,6),
+	('Ryzen 3000 5','AMD',16,6),
+	('Ryzen 4000 3','AMD',19,7),
+	('Ryzen 4000 5','AMD',20,7),
+	('Ryzen 4000 7','AMD',21,7),
+	('Ryzen 5000 5','AMD',23,8),
+	('Ryzen 5000 7','AMD',24,8),
+	('Ryzen 5000 9','AMD',25,8),
+	('Ryzen 7000 5','AMD',30,10),
+	('Ryzen 7000 7','AMD',31,10),
+	('Ryzen 7000 9','AMD',32,10),
+	('Ryzen 8000 3','AMD',34,11),
+	('Ryzen 8000 5','AMD',35,11),
+	('Ryzen 8000 7','AMD',36,11);
+
 
 -- SHOWING TABLE
 SELECT * FROM GPUdetails;

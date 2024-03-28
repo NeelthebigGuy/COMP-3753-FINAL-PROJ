@@ -15,46 +15,47 @@
 <html>
     <head>
         <title>Welcome to the database page!</title>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="main.css">
         <script src="https://kit.fontawesome.com/33c7d329d8.js" crossorigin="anonymous"></script>
     </head>
     <body>
         
-            <a href="index.php" class="backbutton">
-                
-                <i class="fa-solid fa-backward"></i>
-                
-            </a>
+        <a class="backbutton" href="index.php">
+                <i class="fa-solid fa-backward" style="margin-top: 23%; margin-left: 20%"></i>
+        </a>
     
         <div class="center" style="margin-top: 40px;">
-            <div class="container">
-                <div class="mytitle">
-                    <h1>GPU DATABASE </h1>
-                </div>
-                <table class="table table-bordered table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>GPU Name</th>
-                            <th>Brand</th>
-                            <th>VRAM</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        while($row = mysqli_fetch_array($result)) {
-                            echo "<tr>";
-                            echo "<td>" . $row['GPU_Name'] . "</td>";
-                            echo "<td>" . $row['Brand'] .  "</td>";
-                            echo "<td>" . $row['Video_RAM_GB'] .  "</td>";
-                            echo "</tr>";
-                        }
-                        // Free result set
-                        mysqli_free_result($result);
-                        mysqli_close($con);
-                        ?>
-                    </tbody>
-                </table>
+            <div class="mytitle">
+                <h1>Dbelly stinky head</h1>
             </div>
         </div>
+
+
+        <!--    PADDING     -->
+        <div style="height: 20px;"></div>
+
+
+        <div class="center">
+            <h3>
+                Please enter your Graphics Card Brand
+            </h3>
+        </div>
+
+        <div class="center">
+            <form>
+                <input list="GPUBrands" name="GPUBrand" id="GPUBrand">
+                <datalist id="GPUBrands">
+                    <?php
+                    
+                    echo '<option value="TEST">hello</option>';
+                    echo '<option value="TEST">hello</option>';
+                    echo '<option value="TEST">hello</option>';
+
+                    ?>
+                </datalist>
+            </form>
+        </div>
+
+
     </body>
 </html>
