@@ -142,3 +142,12 @@ input:hover{
 .navitem:hover{
     scale: 115%;
 }
+
+.sleektable{
+    background-color: #EDF2F4;
+    border-radius: 10px;
+    margin: 20px;
+    border: 1px solid #020405;
+    height: fit-content;
+    padding: 10px;
+}

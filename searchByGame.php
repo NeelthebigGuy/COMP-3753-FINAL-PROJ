@@ -117,38 +117,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
        
         //echo '<div"><h3>Graphics cards that can run ' . $gameName . ':</h3></div>';
-             echo '<div class="center">';
+        echo '<div class="center">';
+        echo '<div class="sleektable">';
+        echo '<table>';
+        echo '<tr><th colspan="2">' . $gpuBrand . ' Graphics cards that can run ' . $gameName . ':</th></tr>';
+        while (($gpu = mysqli_fetch_array($gpus))) {
+            echo '<tr><td>' . $gpu["GPU_Name"] . '</td><td>Strength: ' . $gpu["Strength"] . '</td></tr>';
+        }
+        echo '</table>';
+        echo '</div>'; // Close GPU division
+        mysqli_free_result($gameMinGPUStr);
 
-                echo '<div style="margin-right: 20px;" >';
-                    echo '<h3>' . $gpuBrand . ' Graphics cards that can run ' . $gameName . ':</h3>';
-                    while (($gpu = mysqli_fetch_array($gpus))) {
-                    echo '<div>' . $gpu["GPU_Name"] . " " . "-". " " . "Strength:" . $gpu["Strength"]  .'</div>';
-                
-                    }
-                    mysqli_free_result($gameMinGPUStr);
-                echo '</div>';
-              
-                
-                echo '<div>';
-                    echo '<h3>' . $cpuBrand . ' CPUs that can run ' . $gameName . ':</h3>';
-                    while ($cpu = mysqli_fetch_array($cpus)) {
-                        echo '<div>' . $cpu["CPU_Name"] . " " . "-" . " " . "Strength:" . $cpu["Strength"] . '</div>';
-                    
-                        }
-                        mysqli_free_result($gameMinCPUStr);
-                
-                
-                echo '</div>';
-            
+        echo '<div class="sleektable">';
+        echo '<table>';
+        echo '<tr><th colspan="2">' . $cpuBrand . ' CPUs that can run ' . $gameName . ':</th></tr>';
+        while ($cpu = mysqli_fetch_array($cpus)) {
+            echo '<tr><td>' . $cpu["CPU_Name"] . '</td><td>Strength: ' . $cpu["Strength"] . '</td></tr>';
+        }
+        echo '</table>';
+        echo '</div>'; // Close CPU division
+        mysqli_free_result($gameMinCPUStr);
 
-             
-        
-            echo '</div>';
-            
-        
-        
-        
-       
+        echo '</div>'; // Close center division
+
     }
 }
 ?>

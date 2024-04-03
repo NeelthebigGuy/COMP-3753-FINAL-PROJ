@@ -91,12 +91,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         echo '<div class="center">';
-            if($gpuStr1 > $cpuStr1){
-            echo '<div><h3>' . $gpuName . ' graphics card is being bottlenecked by ' . $cpuName . '</h3></div>';
-            }
-            else{
-            echo '<div><h3>' . $gpuName . ' graphics card is NOT being bottlenecked by ' . $cpuName . '</h3></div>';
-            }
+            echo '<div class="sleektable">';
+                if($gpuStr1 > $cpuStr1+10){
+                echo '<h3>' . $gpuName . ' is being bottlenecked by ' . $cpuName . '</h3>';
+                }
+                else{
+                    if($cpuStr1 > $gpuStr1+10){
+                        echo '<h3>' . $cpuName . ' is being bottlenecked by ' . $gpuName . '</h3>';
+                    }
+                    else{
+                        echo '<h3> No bottlenecking present</h3>';
+                    }
+                }
         echo '</div>';
 
        
