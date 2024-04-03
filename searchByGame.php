@@ -30,7 +30,7 @@ if (mysqli_connect_errno()) {
 <form method="POST">
     <div class="center">
         <div>
-            <h3>Please Enter the Video Game Name</h3>
+            <h3>Please enter the Video Game name</h3>
         
             <div class="center">
             <input list="GameNames" name="GameName" id="GameName" class="custominput">
@@ -86,7 +86,7 @@ if (mysqli_connect_errno()) {
     <div style="height: 10px;"></div>
 
     <div class="center">
-        <input type="submit" style="margin-left: 55px;">
+        <input type="submit" style="margin-left: 5px;">
     </div>
 </form>
 

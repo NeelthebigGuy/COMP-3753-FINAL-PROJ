@@ -19,6 +19,16 @@ a{
     color: inherit;
 }
 
+.result{
+    padding: 2px;
+    transition: 0.2s;
+}
+
+.result:hover{
+    background-color: #D90429;
+    color: #EDF2F4;
+}
+
 .custominput{
     padding: 5px;
     border-radius: 2px;
@@ -58,6 +68,35 @@ a{
     justify-content: center;
 }
 
+.resultscontainers{
+    display: flex;
+    justify-content: space-around;
+    background-color: #EDF2F4;
+    padding: 10px;
+    border: 2px solid #2B2D42;
+    border-radius: 5px;
+    gap: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+    transition: .1s;
+    cursor: default;
+}
+
+.resultscontainers:hover{
+    scale: 105%;
+}
+
+input{
+    
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    transition: .1s;
+    cursor: default;
+}
+
+input:hover{
+    scale: 105%;
+}
+
 .mytitle{
     margin: 20px 0;
     background-color: #EDF2F4;
@@ -71,6 +110,13 @@ a{
 
 .mytitle:hover{
     scale: 105%;
+}
+
+.resultTitle{
+    font-size: 30px;
+    padding: 2px;
+    border-bottom: 1px solid #8D99AE;
+    margin-bottom: 10px;
 }
 
 .navbar{

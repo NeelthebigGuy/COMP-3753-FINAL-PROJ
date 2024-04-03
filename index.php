@@ -20,7 +20,7 @@
                 <div class="center">
                     <div class="navbar">
                         <a class="navitem" href="seeData.php">Search By GPU & CPU <i class="arrow fa-solid fa-arrow-right"></i> </a>
-                        <a class="navitem" href="seeData.php">Search By Game <i class="arrow fa-solid fa-arrow-right"></i> </a>
+                        <a class="navitem" href="searchByGame.php">Search By Game <i class="arrow fa-solid fa-arrow-right"></i> </a>
                         <a class="navitem" href="seeData.php">Find GPU & CPU BottleNeck <i class="arrow fa-solid fa-arrow-right"></i> </a>
                     </div>
                 </div>
